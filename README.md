@@ -1,7 +1,15 @@
-Phison 2251-03 (2303) Custom Firmware &amp; Existing Firmware Patches
-========
+# Phison 2251-03 (2303) Custom Firmware &amp; Existing Firmware Patches
+
+## Prerequisites
+
+* [sdcc](http://sdcc.sourceforge.net/)
+* [sfk](http://stahlworks.com/dev/swiss-file-knife.html)
+* [ruby](https://www.ruby-lang.org/en/)
+
+## Structure 
 
 This repository contains the following items:
+
 - `DriveCom` -- PC C# application to communicate with Phison drives.
 - `EmbedPayload` -- PC C# application to embed Rubber Ducky inject.bin key scripts into custom firmware for execution on the drive.
 - `Injector` -- PC C# application to extract addresses/equates from firmware as well as embed patching code into the firmware.
@@ -9,6 +17,7 @@ This repository contains the following items:
 - `patch` -- this is a collection of 8051 patch code written in C.
 
 Releases have the following items:
+
 - `patch` -- this is a collection of 8051 patch code written in C.
 - `tools` -- these are the compiled binaries of all the tools.
 - `CFW.bin` -- this is custom firmware set up to send an embedded HID payload.
@@ -20,6 +29,7 @@ As long as you are using the correct firmware image for your controller version 
 **WARNING: This is experimental software. Use on unsupported devices, or even on supported devices, may cause loss of data, or even permananent damage to devices. Use at your own risk.**
 
 ## Getting Started
+
 *See [Known Supported Devices](https://github.com/adamcaudill/Psychson/wiki/Known-Supported-Devices) for information on supported devices; use on an unsupported device may cause permanent damage to the device.*
 
 To get started, you'll need to obtain a burner image, which is the 8051 executable responsible for flashing firmware to the drive.
@@ -27,6 +37,7 @@ To get started, you'll need to obtain a burner image, which is the 8051 executab
 See [Obtaining a Burner Image](https://github.com/adamcaudill/Psychson/wiki/Obtaining-a-Burner-Image) on the wiki for more information.
 
 ## Build Environment
+
 To patch or modify existing firmware, you must first set up a build environment. See [Setting Up the Environment](https://github.com/adamcaudill/Psychson/wiki/Setting-Up-the-Environment) on the wiki for more information.
 
 At a minimum, SDCC needs to be installed to `C:\Program Files\SDCC`.
